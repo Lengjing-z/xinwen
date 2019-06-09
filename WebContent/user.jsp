@@ -83,8 +83,8 @@ List<User> list = (List<User>)session.getAttribute("userlist");
 <form action="">
 <input type="hidden"  id = "id1" name = "id">
 用户名：<input type="text"  id="username1" name = "username" /><br>
-性别：<input type="radio" name="sex" value="男">男
-<input type="radio" name="sex" value="女">女<br>
+性别：<input type="radio" name="sex1" value="男">男
+<input type="radio" name="sex1" value="女">女<br>
 类型：<select id="type1" name = "type">
 <option value="1">管理员</option>
 <option value="0">普通用户</option>
@@ -165,12 +165,12 @@ function showUser(t){
 		//alert(data.sex);
 		if(data.sex=='0'){
 			
-			$('input:radio[name=sex]:nth(1)').removeAttr('checked');
-			$('input:radio[name=sex]:nth(0)').attr('checked',true);//将name为sex的单选按钮的第0个，添加checked属性并赋值为true（相当于被选中）
+			$('input:radio[name=sex1]:nth(1)').removeAttr('checked');
+			$('input:radio[name=sex1]:nth(0)').attr('checked',true);//将name为sex的单选按钮的第0个，添加checked属性并赋值为true（相当于被选中）
 			
 		}else{
-			$('input:radio[name=sex]:nth(0)').removeAttr('checked');
-			$('input:radio[name=sex]:nth(1)').attr('checked',true);
+			$('input:radio[name=sex1]:nth(0)').removeAttr('checked');
+			$('input:radio[name=sex1]:nth(1)').attr('checked',true);
 		}
 		
 	   if(data.type=="0"){//0是普通用户
