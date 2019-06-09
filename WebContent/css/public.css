@@ -1,0 +1,13 @@
+/* CSS Document */
+*{ margin:0px; padding:0px;}
+.clears{
+		clear:both;
+		height:0px;
+		line-height:0px;
+		overflow:hidden;
+		font-size:0px;
+	}/*清除浮动*/
+.left{ float:left}/*左浮动*/
+.right{ float:right}/*右浮动*/
+a{ text-decoration:none; color:#000;}/*清除a标签下划线*/
+ul,li,ol{ list-style:none;}/*清楚列表样式*/
