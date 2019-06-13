@@ -6,10 +6,11 @@
 <meta charset="utf-8">
 <title>无标题文档</title>
 <link rel="stylesheet" type="text/css" href="css/public.css">
+
 </head>
-<frameset rows="80,*" cols="*" frameborder="NO" border="0" framespacing="0">
+<frameset rows="80,*" cols="*" frameborder="NO" border="2" framespacing="0" bordercolor="green">
   <frame src="top.jsp" name="topFrame" scrolling="NO" noresize title="topFrame">
-  <frameset rows="*" cols="178,*" framespacing="0" frameborder="yes" border="0" bordercolor="#66FFCC">
+  <frameset rows="*" cols="178,*" framespacing="0" frameborder="yes" border="2" bordercolor="#66FFCC">
     <frame src="left.jsp" name="leftFrame" scrolling="NO" noresize title="leftFrame">
     <frame src="main.jsp" name="mainFrame" title="mainFrame">
   </frameset>

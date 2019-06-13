@@ -5,20 +5,33 @@
 <head>
 <meta charset="utf-8">
 <title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/public.css">
 <script type="text/javascript" src = "js/jquery-3.2.1.min.js"></script>
+<style type="text/css">
+h4{ font-size:30px; margin-bottom:20px;}/*标题*/
+.content{ margin-top:50px; margin-left:50px;}/*界面位置*/
+.inputs{ border:1px #F60 soid; outline:none; width:200px; height:30px; padding-left:10px; padding-right:10px; border-radius:5px; transition:all 0.2s;}/*输入框属性*/
+.inputs:focus{ border-color:#F00;}/*聚焦时属性*/
+p{ margin-bottom:20px;}/*p标签间距*/
+input{ outline:none;}
+.red{ border:1px #0000FF solid;}
+.dl{ background:#F30; width:100px; height:30px; margin-left:55px; color:#FFF; border:none;}/*登录按钮属性*/
+</style>
 </head>
 
 <body>
 <form name="form1" method="post" action="Registerseverlet" id ="subm">
-  <div>账户：
-    <input type="text" name="username" id = "user" onblur="checkUser()">
+<div class="content">
+    <h4>注册:</h4>
+  <p>账户：
+    <input class="inputs" type="text" name="username" id = "user" onblur="checkUser()">
     <span id = "ck"></span>
-  </div>
+  </p>
   <p>密码：
-    <input type="password" name="pass" id ="pass">
+    <input class="inputs" type="password" name="pass" id ="pass">
   </p>
   <p>确认密码：
-    <input type="password" name="repass" id = "repass">
+    <input class="inputs" type="password" name="repass" id = "repass">
   </p>
   <p>性别：
     <input type="radio" name="sex" value="男">
@@ -43,9 +56,10 @@
     <textarea name="intrd" id="textarea"></textarea>
   </p>
   <p>
-    <input type="button" name="button"  value="注册"  onclick="check()" >
-    <input type="submit" name="button2" id="button2" value="重置">
+    <input class="dl" type="button" name="button"  value="注册"  onclick="check()" >
+    <input class="dl" type="submit" name="button2" id="button2" value="重置">
   </p>
+  </div>
 </form>
 
 <script type="text/javascript">

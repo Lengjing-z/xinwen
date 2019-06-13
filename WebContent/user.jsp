@@ -5,9 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/public.css">
 <title>Insert title here</title>
 
 <style type="text/css">
+.close{
+ text-align: center; margin-top:-20px;
+float:right;
+cursor: pointer;
+}
+.close:hover{background: red;}
 td{ text-align:center; border:1px #F60 soid; outline:none; border-radius: 5px;}
 table{margin-left: auto; margin-right: auto;}
 #updateuser{
@@ -24,17 +31,17 @@ table{margin-left: auto; margin-right: auto;}
 	padding-left:50px;
 }
 #show{
-background-color: white;
+	background-color: white;
 	width: 400px;
 	height: 200px;
 	margin: auto;
 	position: absolute;
 	z-index: 2;
-	left: 71px;
+	left: 500px;
 	top: 53px;
 	border: #000 thick solid;
-	padding-top:20px;
-	padding-left:50px;
+	padding-top: 20px;
+	padding-left: 50px;
 	}
 </style>
 
@@ -77,8 +84,9 @@ List<User> list = (List<User>)session.getAttribute("userlist");
 		<%} %>
   </table>
   </div>
-<div id = "show">
-	用户详细信息
+<div id = "show"><span class="close" onclick="close_div()" >✖</span>
+<p class="clear"></p>
+	<h4>用户详细信息</h4>
 <hr>
 <form action="">
 <input type="hidden"  id = "id1" name = "id">
@@ -89,12 +97,12 @@ List<User> list = (List<User>)session.getAttribute("userlist");
 <option value="1">管理员</option>
 <option value="0">普通用户</option>
 </select><br>
-<input type="button" onclick="close_div()" value="关闭">
+
 
 </form>
 </div>
 
-<div id="updateuser">
+<div id="updateuser"><span class="close" onclick="close_div()" >✖</span>
 修改用户信息
 <hr>
 <form action="Updateseverlet">
@@ -108,7 +116,6 @@ List<User> list = (List<User>)session.getAttribute("userlist");
 </select><br>
 <input type="submit" value="修改">
 <input type="reset" value="重置">
-<input type="button" onclick="close_div()" value="关闭">
 
 </form>
 

@@ -15,6 +15,7 @@ p{ text-align: center; line-height: 30px;}
 <%User u = (User)session.getAttribute("user");  
 if(u.getType().equals("1")){
 %>
+<p><a href="PersonalSeverlet?id=0&username=<%=u.getUsername() %>" target="mainFrame">个人中心</a></p>
 <p><a href="GetuserSeverlet" target="mainFrame">用户管理</a></p>
 <%}else{ %>
 <p><a href="PersonalSeverlet?id=0&username=<%=u.getUsername() %>" target="mainFrame">个人中心</a></p>
